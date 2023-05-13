@@ -10,7 +10,7 @@ const refs = {
     ulEl: document. querySelector('.country-list'),
     divEl: document.querySelector('.country-info'),
 }
-document.body.style.background = 'yellow';
+document.body.style.background = 'rgba(255,155,0, 0.2)';
 
 refs.inputEl.addEventListener('input', debounce(onSubmit, DEBOUNCE_DELAY));
 function onSubmit() {
@@ -48,8 +48,8 @@ function countryInfo(countries) {
 function countryList(country){
   return country.reduce((acc, { name: { official }, flags }) => {
     return (acc + `
-      <img class="image" src="${flags.svg}" width="50" alt="name"/>
-      <h1 class="title">${official}</h1>
+      <li class="image"><img src="${flags.svg}" width="50" alt="name"/>
+      <p class="title">${official}</p></li>
     `);
   }, '');
 }
