@@ -10,7 +10,7 @@ const refs = {
     ulEl: document. querySelector('.country-list'),
     divEl: document.querySelector('.country-info'),
 }
-document.body.style.background = 'tomato';
+document.body.style.background = 'yellow';
 
 refs.inputEl.addEventListener('input', debounce(onSubmit, DEBOUNCE_DELAY));
 function onSubmit() {
