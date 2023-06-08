@@ -22,9 +22,11 @@ function onSubmit() {
   }
   API.fetchCountries(inputEvent).then(data => {
     if (data.length > 10) {
+      clearInter();
       Notiflix.Notify.info(
         'Too many matches found. Please enter a more specific name.'
-      );}
+      );
+    }
       countryResult(data);
   }).catch(err => {
     clearInter();
